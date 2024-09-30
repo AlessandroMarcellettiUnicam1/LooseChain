@@ -1,0 +1,86 @@
+{
+  "name": "LooseValues",
+  "prefix": "loose",
+  "uri": "http://loosevalues",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "LooseValues",
+      "extends": [
+        "bpmn:Choreography",
+        "bpmn:Message",
+        "bpmn:Participant",
+      ],
+      "properties": [
+        {
+          "name": "messageItems",
+          "isMany": true,
+          "type": "loose:MessageValue"
+        },
+        {
+          "name":"attributeValues",
+          "isMany":true,
+          "type":"loose:MessageAttributeValues"
+        },
+        {
+          "name":"link",
+          "isMany":true,
+          "type":"loose:MessageButton"
+        },
+        {
+          "name": "attributeItems",
+          "isMany": true,
+          "type": "loose:AttributeValue"
+        },
+        {
+          "name": "participantItems",
+          "isMany": true,
+          "type": "loose:ParticipantValue"
+        }
+      ]
+    },
+    {
+      "name": "MessageValue",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name":"MessageAttributeValues",
+      "properties":[
+        {
+          "name":"name",
+          "isAttr":true,
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "name": "AttributeValue",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ParticipantValue",
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}
