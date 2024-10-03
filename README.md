@@ -13,6 +13,9 @@ This demo application uses the npm package of chor-js to view and edit BPMN 2.0 
 
 ## Local Usage
 
+## Requirements
+- [NodeJs](https://nodejs.org/en) for the JavaScript environment
+
 ### Node
 
 You can install and run the demo locally using Node.js.
