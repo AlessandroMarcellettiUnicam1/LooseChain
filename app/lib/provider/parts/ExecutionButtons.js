@@ -351,7 +351,9 @@ export async function buttonExecutePressedComposition(businessObject) {
     console.log(activity, message, selectAttributes, values, controlFlowElementList, edgeConditionList)
     const gasPrice = await web3.eth.getGasPrice();
     const gasLimit = 3000000;
-    await contract.methods.executeCompMessage(activity, message, selectAttributes, values, controlFlowElementList, edgeConditionList).send({ from: "0x1bf6d93F3CE0dDc961560819aa774dE7Cf54D69D" ,gas:gasLimit,gasPrice:gasPrice})
+    const account = await web3.eth.getAccounts()
+
+    await contract.methods.executeCompMessage(activity, message, selectAttributes, values, controlFlowElementList, edgeConditionList).send({ from: account[0] ,gas:gasLimit,gasPrice:gasPrice})
 
 
 
